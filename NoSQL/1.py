@@ -2,7 +2,7 @@ import boto3
 
 bucketName = 'datatesting-one'
 
-s3 = boto3.resource('s3', aws_access_key_id='AKIAYT7ZQ7LZR6FOWE4U', aws_secret_access_key='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')
+s3 = boto3.resource('s3', aws_access_key_id='access_key', aws_secret_access_key='secret_key')
 
 try:
 	s3.create_bucket(Bucket=bucketName, CreateBucketConfiguration={'LocationConstraint': 'us-west-2'})
