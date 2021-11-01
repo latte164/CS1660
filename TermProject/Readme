@@ -1,3 +1,1 @@
-Readme
-
 Created Kubernetes cluster on gcp. Pushed all docker images with "docker push gcr.io/<my-project-id>/<docker-image>" Clicked "Deploy" on the cluster page and added the images and the initial commands where necessary. Provided commands for all docker images were used as the initial command / default entry point. Otherwise, no initial command was used. Links and screenshots requested are provided in the .docx file.
