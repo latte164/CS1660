@@ -23,12 +23,20 @@ spec:
           image: docker.io/bitnami/spark:3
           ports:
             - containerPort: 7077
-          environment:
-            - SPARK_MODE=worker
-            - SPARK_MASTER_URL=spark://spark:7077
-            - SPARK_WORKER_MEMORY=1G
-            - SPARK_WORKER_CORES=1
-            - SPARK_RPC_AUTHENTICATION_ENABLED=no
-            - SPARK_RPC_ENCRYPTION_ENABLED=no
-            - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-            - SPARK_SSL_ENABLED=no
+          env:
+            - name: SPARK_MODE
+              value: worker
+            - name: SPARK_MASTER_URL
+              value: spark://spark:7077
+            - name: SPARK_WORKER_MEMORY
+              value: 1G
+            - name: SPARK_WORKER_CORES
+              value: 1
+            - name: SPARK_RPC_AUTHENTICATION_ENABLED
+              value: no
+            - name: SPARK_RPC_ENCRYPTION_ENABLED
+              value: no
+            - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+              value: no
+            - name: SPARK_SSL_ENABLED
+              value: no
