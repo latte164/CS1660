@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: jupyter-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      component: jupyter
+
+  template:
+    metadata:
+      labels:
+        component: jupyter
+
+    spec:
+      containers:
+        - name: jupyter
+          image: jupyter/minimal-notebook
+          ports:
+            - containerPort: 8888
