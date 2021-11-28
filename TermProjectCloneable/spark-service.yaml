@@ -1,0 +1,16 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: spark-service
+
+spec:
+  selector:
+    component: spark
+
+  type: LoadBalancer
+
+  ports:
+    - port: 7077
+      targetPort: 7077

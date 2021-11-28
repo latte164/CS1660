@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: hadoop-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      component: hadoop
+
+  template:
+    metadata:
+      labels:
+        component: hadoop
+
+    spec:
+      containers:
+        - name: hadoop
+          image: gelog/hadoop
+          ports:
+            - containerPort: 80
